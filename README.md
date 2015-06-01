@@ -20,7 +20,7 @@ Each cell in the table is represented as an object in each array
 
 ```
 {  
-  "caption":"our Awesome Caption!",
+  "caption":"your Awesome Caption!",
   "head":[
     {
       "text": String,
