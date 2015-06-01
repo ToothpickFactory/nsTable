@@ -25,8 +25,13 @@ Each cell in the table is represented as an object in each array
     {
       "text": String,
       "colspan": Number,
-      "link": "A clickable link that triggers tableLink(this)"
+      "link": Bool
     }
   ]
 }
 ```
+
+Text: The thing to display in the cell
+Colspan: Number of cells this can expand accross
+Link: A clickable link that triggers tableLink(this). Passes the current object into a function on scope called tableLink.
+
