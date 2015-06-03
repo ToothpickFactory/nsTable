@@ -5,6 +5,11 @@ Simple directive that takes JSON and creates a table from it.
 angular.module("app", ["nsTable"]);
 
 #Usage
+HTML
+```
+<ns-table table="tableJSON"></ns-table>
+```
+
 The directives takes a JSON object that can contain "head", "body", and/or "foot".
 
 ```
