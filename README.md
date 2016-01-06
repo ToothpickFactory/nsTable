@@ -27,7 +27,7 @@ Each cell in the table is represented as an object in each array
       // Cell
       {
         "text": String,
-        "action": function(){}
+        "action": function(cell){}
       }
     ]
   ]

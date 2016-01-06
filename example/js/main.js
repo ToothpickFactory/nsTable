@@ -11,7 +11,9 @@ var data = {
     [
       {
         "text": 'String',
-        "action": 'woot'
+        "action": function(cell){
+          console.log(cell);
+        }
       }
     ]
   ],

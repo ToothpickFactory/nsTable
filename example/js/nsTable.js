@@ -22,9 +22,9 @@ function nsTable(tableData){
 		'text': function(element, value, key){
 			element.innerHTML = value;
 		},
-		'action': function(element, value, key){
+		'action': function(element, value, key, cell){
 			element.addEventListener('click', function() {
-				console.log(element, value, key);
+				value(cell);
 			});
 			element.classList.add('clickable');
 		},
@@ -69,7 +69,7 @@ function nsTable(tableData){
 	function buildAttr(element, cell){
 		_.forEach(cell, function(value, key){
 			var option = options[key] ? key : 'attr';
-			options[option](element, value, key);
+			options[option](element, value, key, cell);
 		});
 	  return element;
 	};
