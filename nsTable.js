@@ -54,7 +54,7 @@ function nsTable(tableData){
 	    var tr = document.createElement('tr');
 	    _.forEach(row, function(cell){
 	      if(cell.rowOptions){
-	        tr = buildAttr(tdTh, cell);
+	        tr = buildAttr(tr, cell);
 	        return;
 	      };
 	      var tdTh = document.createElement(cellType);
@@ -68,6 +68,7 @@ function nsTable(tableData){
 	// Build out each cell with options
 	function buildAttr(element, cell){
 		_.forEach(cell, function(value, key){
+			if(key === 'rowOptions') return;
 			var option = options[key] ? key : 'attr';
 			options[option](element, value, key, cell);
 		});

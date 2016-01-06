@@ -38,4 +38,6 @@ Text: The thing to display in the cell
 
 Action: Triggers a the function
 
+rowOptions: Flags the builder to apply attributes to the row element
+
 Unknown: Any key that does not have a constructor will be made into an attribute with the key as the name of the attribute and value as the value.

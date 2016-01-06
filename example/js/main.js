@@ -10,6 +10,10 @@ var data = {
   "body":[
     [
       {
+        "rowOptions": true,
+        "class": "rowClass"
+      },
+      {
         "text": 'String',
         "action": function(cell){
           console.log(cell);
