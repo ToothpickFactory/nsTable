@@ -1,16 +1,11 @@
 # nsTable
-Simple directive that takes JSON and creates a table from it.
+Simple tool that takes JSON and creates a table from it.
 
-#Install
-angular.module("app", ["nsTable"]);
+#Dependencies
+lodash 3+
 
 #Usage
-HTML
-```
-<ns-table table="tableJSON"></ns-table>
-```
-
-The directives takes a JSON object that can contain "head", "body", and/or "foot".
+nsTable takes a JSON object that can contain "caption", "head", "body", and/or "foot".
 
 ```
 {  
@@ -27,18 +22,20 @@ Each cell in the table is represented as an object in each array
 {  
   "caption":"your Awesome Caption!",
   "head":[
-    {
-      "text": String,
-      "colspan": Number,
-      "link": Bool
-    }
+    // Row
+    [
+      // Cell
+      {
+        "text": String,
+        "action": function(){}
+      }
+    ]
   ]
 }
 ```
 
 Text: The thing to display in the cell
 
-Colspan: Number of cells this can expand accross
+Action: Triggers a the function
 
-Link: A clickable link that triggers tableLink(this). Passes the current object into a function on scope called tableLink.
-
+Unknown: Any key that does not have a constructor will be made into an attribute with the key as the name of the attribute and value as the value.
