@@ -30,5 +30,5 @@ var data = {
   ]
 };
 
-var table = nsTable(data)
-document.body.appendChild(table);
+var exampleTable = new nsTable(data)
+document.body.appendChild(exampleTable.table);
